@@ -23,7 +23,7 @@
 
   -  name: Copy files 
      copy:
-       src: /tmp/dpot/index.html
+       src: /tmp/dpot
        dest: /var/www/html/
        remote_src: yes 
 
@@ -31,6 +31,7 @@
      service:
        name: httpd
        state: restarted
+       
 
 
 
