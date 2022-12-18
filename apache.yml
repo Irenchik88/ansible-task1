@@ -23,9 +23,34 @@
 
   -  name: Copy files 
      copy:
-       src: /tmp/dpot
+       src: /tmp/dpot/index.html
        dest: /var/www/html/
        remote_src: yes 
+  
+  -  name: Copy files 
+     copy:
+       src: /tmp/dpot/gallery.html
+       dest: /var/www/html/
+       remote_src: yes 
+ 
+  -  name: Copy files 
+     copy:
+       src: /tmp/dpot/about.html
+       dest: /var/www/html/
+       remote_src: yes 
+  
+  -  name: Copy files 
+     copy:
+       src: /tmp/dpot/css
+       dest: /var/www/html/
+       remote_src: yes 
+
+  
+  -  name: Copy files 
+     copy:
+       src: /tmp/dpot/images
+       dest: /var/www/html/
+       remote_src: yes   
 
   -  name: Restart service httpd, in all cases
      service:
